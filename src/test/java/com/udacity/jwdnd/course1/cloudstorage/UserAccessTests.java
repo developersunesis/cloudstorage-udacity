@@ -29,7 +29,7 @@ class UserAccessTests extends TestParentSupplier {
 
 		driver.get(BASE_URL + "/login");
 		Thread.sleep(1000);
-		loginUser("test", "12345678");
+		loginUser("testuser", "12345678");
 		assertThrows(NoSuchElementException.class, () -> loginPage.getErrorMessage().getText());
 		assertEquals("Home", driver.getTitle());
 
